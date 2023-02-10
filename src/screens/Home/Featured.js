@@ -21,7 +21,7 @@ const Featured = () => {
   ];
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <Carousel />
         <CardSilder
@@ -99,8 +99,7 @@ const Featured = () => {
             Share your designs by tagging @GotPrint or use hastag
           </Text>
           <Text style={styles.gridFooterLabel2}>
-            #GotPrint for
-            a chance to be featured!
+            #GotPrint for a chance to be featured!
           </Text>
         </View>
       </View>
@@ -133,12 +132,15 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     backgroundColor: "#ffff",
+    borderColor: "#c0c4c1",
+    borderWidth: 1,
     width: "100%",
     height: 100,
     padding: 15,
   },
   satisfactionContainer: {
     flex: 1,
+    width: "100%"
   },
   labelSection: {
     padding: 15,
@@ -198,17 +200,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "500",
   },
-  gridFooterLabel1:{
+  gridFooterLabel1: {
     fontSize: 11,
     paddingTop: 15,
     marginHorizontal: 10,
-    color: '#363434'
+    color: "#363434",
   },
-  gridFooterLabel2:{
+  gridFooterLabel2: {
     fontSize: 11,
     paddingBottom: 15,
     marginHorizontal: 10,
-    color: '#363434'
-  }
+    color: "#363434",
+  },
 });
 export default Featured;
